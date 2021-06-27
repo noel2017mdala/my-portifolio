@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import MidSection from "./Components/Mid-section";
+import { Link } from "react-router-dom";
+import { Header } from "./styles";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header>
+        <div className="burger">
+          <div className="line"></div>
+          <div className="line"></div>
+          <div className="line"></div>
+        </div>
+        <nav>
+          {/* <h1>Abel Mdala</h1> */}
+          <Router>
+            <div className="link-container">
+              <ul className="navigation_link">
+                <Link to="/"> Home</Link>
+                <Link to="/about"> About</Link>
+                <Link to="/resume"> Resume</Link>
+                <Link to="/portfolio"> Portfolio</Link>
+                <Link to="/contact"> Contact</Link>
+              </ul>
+            </div>
+          </Router>
+        </nav>
+      </Header>
+
+      <MidSection />
     </div>
   );
 }
