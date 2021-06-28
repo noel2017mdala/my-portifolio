@@ -9,72 +9,46 @@ const media = {
 export const Mid = styled.div`
   margin-top: 2em;
   .intro {
-    font-size: 20px;
+    text-align: center;
+    font-size: 16px;
+    margin: 1em 0em;
+    text-transform: capitalize;
+    // line-height: 3em;
   }
+
   .intro span {
     font-weight: bold;
   }
 
-  .contact,
-  .resume {
-    margin-left: 4em;
-    background-color: black;
+  .callToAction a {
+    text-decoration: none;
+  }
+  .resume,
+  .contact {
+    margin: 0 auto;
+    background-color: rgb(255, 69, 80);
     color: white;
     border: none;
     border-radius: 0.5em;
-    font-family: "Roboto", sans-serif;
+    // font-family: "Roboto", sans-serif;
     font-size: 16px;
     padding: 1em;
     cursor: pointer;
+    display: block;
   }
 
-  ${media.mobile} {
-    margin-top: 5em;
+  .contact {
+    margin-top: 1em;
+  }
+
+  ${media.tablet} {
     .intro {
       text-align: center;
-      font-size: 16px;
-      margin: 1em 0em;
+      font-size: 19px;
       text-transform: capitalize;
       line-height: 3em;
     }
 
-    .intro span {
-      font-weight: bold;
-    }
-
-    .intro h1 {
-      margin: 0.5em 0em;
-    }
-
-    .callToAction {
-      width: 100%;
-    }
-
-    .callToAction .resume {
-      display: block;
-      padding: 1em;
-      margin: 0 auto;
-      background-color: black;
-      border: none;
-      border-radius: 0.5em;
-      font-family: "Roboto", sans-serif;
-      font-size: 16px;
-      color: white;
-    }
-
-    .callToAction .contact {
-      display: block;
-      padding: 1em 2.7em;
-      margin: 2em auto;
-      background-color: black;
-      color: white;
-      border: none;
-      border-radius: 0.5em;
-      font-family: "Roboto", sans-serif;
-      font-size: 16px;
-    }
-  }
-  ${media.tablet} {
     .row {
       display: flex;
       flex-direction: row;
@@ -87,6 +61,19 @@ export const Mid = styled.div`
       flex-direction: column;
       flex-basis: 100%;
       flex: 1;
+    }
+
+    .callToAction {
+    }
+
+    .btn_collection {
+      margin-left: 2em;
+    }
+
+    .resume,
+    .contact {
+      display: inline;
+      margin: 0em 1em;
     }
   }
 

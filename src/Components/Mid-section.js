@@ -19,12 +19,14 @@ const Midsection = () => {
             </div>
 
             <div className="callToAction">
-              <a href={file} download="Resume">
-                <button className="resume">Download My Resume</button>
-              </a>
-              <a href="mailto:noelmdala2017@gmail.com">
-                <button className="contact">Contact Me</button>
-              </a>
+              <div className="btn_collection">
+                <a href={file} download="Resume">
+                  <button className="resume">Resume</button>
+                </a>
+                <a href="mailto:noelmdala2017@gmail.com">
+                  <button className="contact">Contact Me</button>
+                </a>
+              </div>
             </div>
           </div>
 

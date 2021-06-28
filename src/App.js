@@ -14,8 +14,8 @@ function App() {
           <div className="line"></div>
         </div>
         <nav>
-          {/* <h1>Abel Mdala</h1> */}
           <Router>
+            <h1>{<a href="/">Abel M'dala</a>}</h1>
             <div className="link-container">
               <ul className="navigation_link">
                 <Link to="/"> Home</Link>
