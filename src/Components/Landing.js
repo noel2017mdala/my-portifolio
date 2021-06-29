@@ -1,8 +1,8 @@
 import React from "react";
-import { Mid } from "../styles/content";
 import file from "../files/Resume.pdf";
+import { Mid } from "../styles/content";
 
-const Midsection = () => {
+const Landing = () => {
   return (
     <Mid>
       <div className="content">
@@ -11,7 +11,10 @@ const Midsection = () => {
             {/* <div>Some Text in Column One</div> */}
             <div className="intro">
               <p>
-                Hello 👋 My Name is <span> Abel M'dala</span>
+                Hello 👋 My Name is
+                <span>
+                  <a href="/about">Abel M'dala</a>
+                </span>
               </p>
               <h1>
                 I am a full-stack software developer from Blantyre Malawi🇲🇼
@@ -21,24 +24,17 @@ const Midsection = () => {
             <div className="callToAction">
               <div className="btn_collection">
                 <a href={file} download="Resume">
-                  <button className="resume">Resume</button>
+                  <button className="resume">Download My Resume</button>
                 </a>
                 <a href="mailto:noelmdala2017@gmail.com">
-                  <button className="contact">Contact Me</button>
+                  <button className="contact">Email Me</button>
                 </a>
               </div>
             </div>
-          </div>
-
-          <div className="column">
-            {/* <div>Some Text in Column One</div> 
-            https://hookagency.com/website-color-schemes/
-            */}
           </div>
         </div>
       </div>
     </Mid>
   );
 };
-
-export default Midsection;
+export default Landing;

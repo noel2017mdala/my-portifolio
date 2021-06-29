@@ -33,6 +33,10 @@ export const Header = styled.header`
     margin-right: 2em;
   }
 
+  .navigation_link {
+    margin-bottom: 4em;
+  }
+
   .navigation_link a {
     list-style: none;
     text-decoration: none;

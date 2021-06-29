@@ -1,14 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Landing from "./Landing";
+import About from "./About";
 
-import Nav from "./Components/Nav";
-import Landing from "./Components/Landing";
-import About from "./Components/About";
-
-function App() {
+const Routes = () => {
   return (
     <Router>
-      <Nav />
       <div>
         <Route>
           <Switch>
@@ -19,6 +16,6 @@ function App() {
       </div>
     </Router>
   );
-}
+};
 
-export default App;
+export default Routes;

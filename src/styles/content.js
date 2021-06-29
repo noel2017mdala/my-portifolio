@@ -13,13 +13,17 @@ export const Mid = styled.div`
     font-size: 16px;
     margin: 1em 0em;
     text-transform: capitalize;
-    // line-height: 3em;
   }
 
   .intro span {
     font-weight: bold;
   }
 
+  .intro span a {
+    text-decoration: none;
+    color: rgb(255, 70, 79);
+    margin-left: 0.5em;
+  }
   .callToAction a {
     text-decoration: none;
   }
@@ -63,21 +67,27 @@ export const Mid = styled.div`
       flex: 1;
     }
 
-    .callToAction {
-    }
-
     .btn_collection {
-      margin-left: 2em;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1em;
     }
 
-    .resume,
     .contact {
-      display: inline;
-      margin: 0em 1em;
+      margin: 1em 2em;
     }
   }
 
   ${media.bigScreen} {
+    .intro {
+      text-align: center;
+      font-size: 19px;
+      text-transform: capitalize;
+      line-height: 3em;
+    }
+
     .row {
       display: flex;
       flex-direction: row;
@@ -91,10 +101,16 @@ export const Mid = styled.div`
       flex-basis: 100%;
       flex: 1;
     }
+    .btn_collection {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1em;
+    }
 
-    .intro {
-      text-align: left;
-      margin-left: 3em;
+    .contact {
+      margin: 1em 2em;
     }
   }
 `;
