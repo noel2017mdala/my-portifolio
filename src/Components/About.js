@@ -59,7 +59,7 @@ const About = () => {
         </div>
 
         <p className="callToAction">
-          Feel free to <a href="/contact"> React out</a>
+          Feel free to <a href="/contact"> Reach out</a>
         </p>
       </div>
     </Container>
