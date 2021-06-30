@@ -22,13 +22,13 @@ const About = () => {
         </h2>
         <ul>
           <li>
-            A Self-taught Full Stack software Developer with experience in in
+            A Self-taught Full Stack software Developer with experience in
             developing web-sites, Web applications, and Apis.
           </li>
 
           <li>
             A good understanding of Engineering concepts eg Data Structures and
-            Algorithms{" "}
+            Algorithms
             <a href="https://www.hackerrank.com/noelmdala2017">Hacker Rank</a>,
             <a href="https://leetcode.com/noel2017mdala/">LeetCode</a>
           </li>
@@ -36,6 +36,7 @@ const About = () => {
           <li>
             Currently Working at
             <a href="http://m-technologiesmw.com/">M-technologies Limited</a>
+            as a full-stack developer
           </li>
         </ul>
 
