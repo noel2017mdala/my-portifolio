@@ -1,4 +1,5 @@
 import React from "react";
+import file from "../files/Resume.pdf";
 import { Main } from "../styles/Resume";
 import node from "../images/node.png";
 import html from "../images/html.png";
@@ -39,7 +40,11 @@ const Resume = () => {
             have worked on while working There
           </p>
           <p className="company">
-            <a href="https://smartschools.mw/site/" target="_blank">
+            <a
+              href="https://smartschools.mw/site/"
+              target="_blank"
+              rel="noreferrer"
+            >
               Smart schools
             </a>
           </p>
@@ -50,21 +55,34 @@ const Resume = () => {
             manage all records be it academic or non-academic, from student
             admission to graduation. smart schools is a web based application
             and you can view the demo
-            <a href="https://demo.smartschools.mw/app/" target="_blank">
+            <a
+              href="https://demo.smartschools.mw/app/"
+              target="_blank"
+              rel="noreferrer"
+            >
               Here
             </a>
           </p>
 
           <p className="company">
-            <a href="https://makwacha.com/site/" target="_blank">
+            <a
+              href="https://makwacha.com/site/"
+              target="_blank"
+              rel="noreferrer"
+            >
               Makwacha
             </a>
           </p>
           <p className="summary">
             • Makwacha is a Software as a service (SASS) Accounting Application
             much like Quick books which will be used my small to medium
-            enterprise companies to manage their Finances
-            <a href="https://makwacha.com/site/" target="_blank">
+            enterprise companies to manage their Finances as of now this
+            application is still on progress of being published for use
+            <a
+              href="https://makwacha.com/site/"
+              target="_blank"
+              rel="noreferrer"
+            >
               Here
             </a>
           </p>
@@ -80,7 +98,7 @@ const Resume = () => {
             </div>
             <div className="card">
               <img src={css} alt="CSS3" width="40px" height="40px" />
-              <p>HTML</p>
+              <p>CSS</p>
             </div>
             <div className="card">
               <img
@@ -154,7 +172,10 @@ const Resume = () => {
           </div>
         </div>
 
-        <button className="resume">Download Resume</button>
+        <a href={file} download="Resume" className="resume_container">
+          <button className="resume">Download My Resume</button>
+        </a>
+        {/* <button className="resume">Download Resume</button> */}
       </div>
     </Main>
   );

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import file from "../files/Resume.pdf";
 import { Mid } from "../styles/content";
 
@@ -13,7 +14,7 @@ const Landing = () => {
               <p>
                 Hello 👋 My Name is
                 <span>
-                  <a href="/about">Abel M'dala</a>
+                  <Link to="/about">Abel M'dala</Link>
                 </span>
               </p>
               <h1>

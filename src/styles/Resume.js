@@ -37,6 +37,7 @@ export const Main = styled.div`
     padding-top: 1em;
     color: rgb(255, 96, 89);
     font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
   }
 
   .tagLine {
@@ -85,6 +86,10 @@ export const Main = styled.div`
     padding-left: 0.2em;
   }
 
+  .summary strong {
+    color: rgb(255, 96, 89);
+  }
+
   .tech_stack h2 {
     text-align: center;
   }
@@ -94,6 +99,7 @@ export const Main = styled.div`
     color: black;
     box-shadow: 5px 5px 15px rgba(0, 0, 0.4, 0.6);
     width: 30%;
+    height: 50%;
     padding: 1.5em;
     margin: 1em auto;
     border-radius: 0.5em;
@@ -119,6 +125,12 @@ export const Main = styled.div`
     height: 60%;
   }
 
+  .resume_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }
   .resume {
     width: 35%;
     margin: block;

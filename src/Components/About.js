@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Container } from "../styles/About";
 import image from "../images/Me.JPG";
 import fullstack from "../images/fullstack.png";
@@ -46,21 +47,22 @@ const About = () => {
 
         <div className="wid_cards">
           <div className="card">
-            <img src={fullstack} alt="fullstack" width="40px" height="40px" />
+            <img src={fullstack} alt="Fullstack" width="40px" height="40px" />
             <p>Full-stack development</p>
           </div>
           <div className="card">
-            <img src={Api} alt="fullstack" width="40px" height="40px" />
+            <img src={Api} alt="API" width="40px" height="40px" />
             <p>API Development</p>
           </div>
           <div className="card">
-            <img src={webApps} alt="fullstack" width="40px" height="40px" />
+            <img src={webApps} alt="WEB APPS" width="40px" height="40px" />
             <p>Web Application Development</p>
           </div>
         </div>
 
         <p className="callToAction">
-          Feel free to <a href="/contact"> Reach out</a>
+          Feel free to
+          <Link to="/contact">React Out</Link>
         </p>
       </div>
     </Container>

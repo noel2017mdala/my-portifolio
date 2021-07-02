@@ -12,7 +12,7 @@ const Nav = () => {
       </div>
       <nav>
         <h1>
-          <a href="/">AM </a>
+          <Link to="/">AM</Link>
         </h1>
 
         <div className="link-container">
