@@ -47,6 +47,11 @@ export const Header = styled.header`
     text-transform: capitalize;
   }
 
+  .active {
+    padding-top: 2em;
+    border-bottom: 2px solid rgb(255, 96, 89);
+  }
+
   ${media.mobile} {
     nav h1 {
       color: rgb(255, 96, 89);

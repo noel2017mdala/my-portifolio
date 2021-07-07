@@ -45,24 +45,49 @@ export const Main = styled.div`
   }
 
   .displayed {
+    // display: flex;
+    // position: relative;
+    // height: 50px;
+    // top: -60%;
+    // width: 35%;
+    // margin: block;
+    // margin: 2em auto;
+    // padding: 1em 0;
+    // background-color: rgb(255, 96, 89);
+    // color: white;
+    // border: none;
+    // border-radius: 0.3em;
+    // transition: all 0.2s ease-in-out;
+    // text-transform: uppercase;
+    // align-items: center;
+    // justify-content: center;
+    // cursor: pointer;
+
+    text-decoration: none;
+    color: white;
+    background-color: rgb(255, 96, 89);
     display: flex;
     position: relative;
-    height: 50px;
-    top: -60%;
-    width: 35%;
+    top: -65%;
+    width: 25%;
     margin: block;
     margin: 2em auto;
-    padding: 2em 0;
-    background-color: rgb(255, 96, 89);
-    color: white;
-    border: none;
-    border-radius: 0.3em;
-    transition: all 0.2s ease-in-out;
-    text-transform: uppercase;
-    align-items: center;
+    padding: 1em;
+    align-content: center;
     justify-content: center;
+    border-radius: 0.3em;
+    font-weight: bold;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-size: 12px;
   }
+
+  .displayed a{
+    text-decoration: none;
+    color: white;
+  }
+
+
 
   .displayed:hover {
     transform: scale(1.1);

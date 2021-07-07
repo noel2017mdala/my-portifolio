@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { Main } from "../styles/PersonalProjects";
 import photo_gallery from "../images/portfolio_images/photo_gallery.png";
 import fms from "../images/portfolio_images/fms.png";
@@ -47,13 +48,15 @@ const PersonalProjects = () => {
             alt="20px"
             width="20px"
           />
-          <button
+          <Link
+            to="/portfolio/photo_gallery"
             className={
               display.photoGallery_button ? "displayed" : "notdisplayed"
             }
           >
+            {/* <Link to="/portfolio/photo_gallery">Learn More</Link> */}
             Learn More
-          </button>
+          </Link>
         </div>
         <div
           className="projects"
@@ -84,9 +87,12 @@ const PersonalProjects = () => {
             alt="20px"
             width="20px"
           />
-          <button className={display.fms_button ? "displayed" : "notdisplayed"}>
+          <Link
+            to="/portfolio/fms"
+            className={display.fms_button ? "displayed" : "notdisplayed"}
+          >
             Learn More
-          </button>
+          </Link>
         </div>
 
         <div
@@ -113,11 +119,12 @@ const PersonalProjects = () => {
           }
         >
           <img src={portfolio} alt="Portfolio" alt="20px" width="20px" />
-          <button
+          <Link
+            to="/portfolio/portfolio"
             className={display.portfolio_button ? "displayed" : "notdisplayed"}
           >
             Learn More
-          </button>
+          </Link>
         </div>
         <div
           className="projects"
@@ -143,13 +150,14 @@ const PersonalProjects = () => {
           }
         >
           <img src={covidTracker} alt="Covid Tracker" alt="20px" width="20px" />
-          <button
+          <Link
+            to="/portfolio/covid_tracker"
             className={
               display.covidTracker_button ? "displayed" : "notdisplayed"
             }
           >
             Learn More
-          </button>
+          </Link>
         </div>
         <div
           className="projects"
@@ -175,11 +183,12 @@ const PersonalProjects = () => {
           }
         >
           <img src={whatsApp} alt="WhatsApp" alt="20px" width="20px" />
-          <button
+          <Link
+            to="/portfolio/web_whatsapp"
             className={display.whatsApp_button ? "displayed" : "notdisplayed"}
           >
             Learn More
-          </button>
+          </Link>
         </div>
       </div>
     </Main>
