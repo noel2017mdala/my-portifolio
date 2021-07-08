@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import file from "../files/Resume.pdf";
 import { Main } from "../styles/Resume";
 import node from "../images/node.png";
@@ -15,7 +16,14 @@ import styled from "../images/styled.jpeg";
 import wordpress from "../images/wordpress.png";
 import git from "../images/git.png";
 import linux from "../images/linux.png";
+import { Resume as ResumeReducer } from "../Redux/Actions/Nav_Action";
 const Resume = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(ResumeReducer());
+  }, [dispatch]);
+
   return (
     <Main>
       <header>

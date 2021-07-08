@@ -1,11 +1,18 @@
-import React from "react";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Main } from "../styles/Portfolio";
 import PersonalProjects from "./PersonalProjects";
 import WorkProjects from "./WorkProjects";
 import { Tab, Tabs, AppBar } from "@material-ui/core";
+import { Portfolio as PortfolioReducer } from "../Redux/Actions/Nav_Action";
 
 const Portfolio = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(PortfolioReducer());
+  }, [dispatch]);
+
   const [SelectedTab, setSelectedTab] = useState(0);
   const handleChange = (event, newValue) => {
     setSelectedTab(newValue);

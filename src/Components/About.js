@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { Container } from "../styles/About";
 import image from "../images/Me.JPG";
 import fullstack from "../images/fullstack.png";
 import Api from "../images/api.png";
 import webApps from "../images/webapps.png";
+import { About as AboutReducer } from "../Redux/Actions/Nav_Action";
 
 const About = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(AboutReducer());
+  }, [dispatch]);
+
   return (
     <Container>
       <header>

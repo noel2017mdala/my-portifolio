@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { Main } from "../styles/PersonalProjects";
 import makwacha from "../images/portfolio_images/makwacha.png";
 import smartSchools from "../images/portfolio_images/smartschools.png";
@@ -36,11 +37,12 @@ const WorkProjects = () => {
           }
         >
           <img src={makwacha} alt="Photo Gallery" alt="20px" width="20px" />
-          <button
+          <Link
+            to="/portfolio/makwacha"
             className={display.makwacha_button ? "displayed" : "notdisplayed"}
           >
             Learn More
-          </button>
+          </Link>
         </div>
         <div
           className="projects"
@@ -67,27 +69,15 @@ const WorkProjects = () => {
             alt="20px"
             width="20px"
           />
-          <button
+          <Link
+            to="/portfolio/smart_schools"
             className={
               display.smartSchools_button ? "displayed" : "notdisplayed"
             }
           >
             Learn More
-          </button>
+          </Link>
         </div>
-        {/* <div className="projects">
-          <img
-            src={Mulanje}
-            alt="Financial Management System"
-            alt="20px"
-            width="20px"
-          />
-          <button
-            className={display.mulanje_button ? "displayed" : "notdisplayed"}
-          >
-            Learn More
-          </button>
-        </div> */}
 
         <div
           className="projects"
@@ -114,11 +104,12 @@ const WorkProjects = () => {
             alt="20px"
             width="20px"
           />
-          <button
+          <Link
+            to="/portfolio/MMCNM"
             className={display.mulanje_button ? "displayed" : "notdisplayed"}
           >
             Learn More
-          </button>
+          </Link>
         </div>
       </div>
     </Main>

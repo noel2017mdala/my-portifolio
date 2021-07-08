@@ -19,10 +19,18 @@ export const Main = styled.div`
     margin-left: 0.5em;
   }
 
+  .appDescription a {
+    text-decoration: none;
+    padding: 0 0.2em;
+  }
   .appDescription {
-    margin-left: 0.2em;
+    padding: 0 0.2em;
   }
 
+  .appDescription b {
+    color: rgb(255, 96, 89);
+    margin-left: 0.2em;
+  }
   .button_collection {
     // display: block;
     margin: 2em auto;

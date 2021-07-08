@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import file from "../files/Resume.pdf";
 import { Mid } from "../styles/content";
+import { Home } from "../Redux/Actions/Nav_Action";
 
 const Landing = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(Home());
+  }, [dispatch]);
+
   return (
     <Mid>
       <div className="content">

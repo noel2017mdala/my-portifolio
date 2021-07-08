@@ -1,15 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { Header } from "../styles";
+import {
+  Home,
+  About,
+  Resume,
+  Portfolio,
+  Contact,
+} from "../Redux/Actions/Nav_Action";
 
 const Nav = () => {
-  const [state, setState] = useState({
-    home: true,
-    about: false,
-    resume: false,
-    portfolio: false,
-    contact: false,
+  const dispatch = useDispatch();
+
+  //call action when page has loaded
+  const select = useSelector((e) => {
+    return e.Navigation;
   });
+
+  useEffect(() => {
+    dispatch(Home());
+  }, [dispatch]);
   return (
     <Header>
       <div className="burger">
@@ -26,80 +37,45 @@ const Nav = () => {
           <ul className="navigation_link">
             <Link
               to="/"
-              className={state.home ? "active" : ""}
+              className={select.home ? "active" : ""}
               onClick={(e) => {
-                setState((prevState) => ({
-                  ...prevState,
-                  home: true,
-                  about: false,
-                  resume: false,
-                  portfolio: false,
-                  contact: false,
-                }));
+                dispatch(Home());
               }}
             >
               Home
             </Link>
             <Link
               to="/about"
-              className={state.about ? "active" : ""}
+              className={select.about ? "active" : ""}
               onClick={(e) => {
-                setState((prevState) => ({
-                  ...prevState,
-                  home: false,
-                  about: true,
-                  resume: false,
-                  portfolio: false,
-                  contact: false,
-                }));
+                dispatch(About());
               }}
             >
               About
             </Link>
             <Link
               to="/resume"
-              className={state.resume ? "active" : ""}
+              className={select.resume ? "active" : ""}
               onClick={(e) => {
-                setState((prevState) => ({
-                  ...prevState,
-                  home: false,
-                  about: false,
-                  resume: true,
-                  portfolio: false,
-                  contact: false,
-                }));
+                dispatch(Resume());
               }}
             >
               Resume
             </Link>
             <Link
               to="/portfolio"
-              className={state.portfolio ? "active" : ""}
+              className={select.portfolio ? "active" : ""}
               onClick={(e) => {
-                setState((prevState) => ({
-                  ...prevState,
-                  home: false,
-                  about: false,
-                  resume: false,
-                  portfolio: true,
-                  contact: false,
-                }));
+                dispatch(Portfolio());
               }}
             >
               Portfolio
             </Link>
             <Link
               to="/contact"
-              className={state.contact ? "active" : ""}
+              className={select.contact ? "active" : ""}
               onClick={(e) => {
-                setState((prevState) => ({
-                  ...prevState,
-                  home: false,
-                  about: false,
-                  resume: false,
-                  portfolio: false,
-                  contact: true,
-                }));
+                dispatch(Contact());
               }}
             >
               Contact

@@ -54,7 +54,6 @@ const PersonalProjects = () => {
               display.photoGallery_button ? "displayed" : "notdisplayed"
             }
           >
-            {/* <Link to="/portfolio/photo_gallery">Learn More</Link> */}
             Learn More
           </Link>
         </div>

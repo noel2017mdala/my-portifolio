@@ -20,11 +20,11 @@ const Whatapp = () => {
               target="_blank"
             >
               Karen Okonwo
-            </a>{" "}
-            she is the one who developed the Ui and i am currently adding the
-            functionality and also adding the backend Service. The FrontEnd is
-            developed using React and the Backend is being developed using
-            Node.js
+            </a>
+            she is the one who developed the User interface and i am currently
+            adding the functionality and also adding the backend Service. The
+            FrontEnd is developed using <b>React</b> and the Backend is being
+            developed using <b>Node.js</b>
           </p>
 
           <div className="button_collection">

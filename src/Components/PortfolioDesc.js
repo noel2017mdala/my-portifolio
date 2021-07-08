@@ -14,13 +14,12 @@ const PortfolioDesc = () => {
         <div className="description">
           <h3 className="appName">Portfolio</h3>
           <p className="appDescription">
-            This is My persona portfolio website and This website was developed
+            This is My personal portfolio website and This website was developed
             using <b>React</b>
           </p>
 
           <div className="button_collection">
             <button className="live_view">
-              {" "}
               <a href="http://abelmdala.netlify.app/" target="_blank">
                 View Live Demo
               </a>
