@@ -111,6 +111,89 @@ margin: 0 auto;
     text-decoration: none;
 }
 
+
+.contact h3{
+    text-transform: capitalized;
+    text-align: center;
+    color: rgb(255,70,79);
+}
+.contact p{
+    font-weight: bold;
+    padding-left: 1em;
+    font-size: 1.2rem;
+}
+.contact form{
+    width: 100%;
+}
+form label{
+    display: none;
+}
+form input{
+    border: 0.5px solid black;
+    display: block;
+    width: 85%;
+    margin: 1em auto;
+    padding: 1em;
+    border-radius: 0.5em;
+}
+
+form textarea{
+    display: block;
+    width: 85%;
+    margin: 1em auto;
+    padding: 1em;
+    resize: none;
+    border: 1px solid black;
+    border-radius: 0.5em;
+}
+
+form input[type=submit]{
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 1em;
+    width: 50%;
+    outline: none;
+    overflow: auto;
+}
+
+.socialMedia{
+    margin-top: 2.5em;
+   
+}
+.socialMedia h3{
+    text-align: center;
+    text-transform: capitalize;
+} 
+
+.socials{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    //  background-color: red;
+    // width: 50%;
+}
+
+.socials a{
+    width: 20%;
+    // height: 20%;
+    // margin: 1em; 0;
+    // transition: all 0.2s ease-in-out;
+}
+
+.socials a img{
+    width: 100%;
+    height: 40%;
+    margin: 0.3em auto;
+    transition: all 0.2s ease-in-out;
+    
+}
+
+.socials img:hover{
+    transform: scale(1.1);
+}
+
 ${media.tablet}{
 
     .aboutMe h2{
@@ -132,6 +215,39 @@ ${media.tablet}{
     .wid_cards .card{
         width: 20%;
     }
+
+    .contact h3{
+        font-size: 2rem;  
+    }
+
+
+form input{
+    width: 50%;
+}
+
+form textarea{
+    width: 50%;
+}
+
+form input[type=submit]{
+    width: 20%;
+}
+
+
+    .socials{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .socials a img{
+        width: 50%;
+        // height: 40%;
+        margin: 0.3em auto;
+        transition: all 0.2s ease-in-out;
+        margin-left: 2em;
+    }
 }
 
 
@@ -148,6 +264,37 @@ ${media.bigScreen}{
 
     .wid_cards .card{
         width: 20%;
+    }
+
+    .contact h3{
+        font-size: 2rem;  
+    }
+
+
+form input{
+    width: 50%;
+}
+
+form textarea{
+
+    width: 50%;
+}
+
+    .socials{
+        display: flex;
+        flex-direction: row;
+        // justify-content: center;
+        // align-items: center;
+        // background-color: red;
+        width: 70%;
+        margin: 0 auto;
+    }
+    .socials a img{
+        width: 40%;
+        height: 40%;
+        margin: 0.3em auto;
+        transition: all 0.2s ease-in-out;
+        margin-left: 3em;
     }
 }
 
