@@ -26,7 +26,7 @@ const Landing = () => {
                 </span>
               </p>
               <h1>
-                I am a full-stack software developer from Blantyre Malawi🇲🇼
+                I am a fullstack software developer from Blantyre Malawi🇲🇼
               </h1>
             </div>
 

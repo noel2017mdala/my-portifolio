@@ -12,7 +12,7 @@ export const Mid = styled.div`
     text-align: center;
     font-size: 16px;
     margin: 1em 0em;
-    text-transform: capitalize;
+    // text-transform: capitalize;
   }
 
   .intro span {
@@ -49,7 +49,7 @@ export const Mid = styled.div`
     .intro {
       text-align: center;
       font-size: 19px;
-      text-transform: capitalize;
+      // text-transform: capitalize;
       line-height: 3em;
     }
 
@@ -84,7 +84,7 @@ export const Mid = styled.div`
     .intro {
       text-align: center;
       font-size: 19px;
-      text-transform: capitalize;
+      // text-transform: capitalize;
       line-height: 3em;
     }
 
