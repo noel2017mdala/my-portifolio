@@ -21,24 +21,32 @@ const Nav = () => {
   useEffect(() => {
     dispatch(Home());
   }, [dispatch]);
+
+  const [toggleOpen, setToggle] = useState(false);
   return (
     <Header>
-      <div className="burger">
-        <div className="line"></div>
-        <div className="line"></div>
-        <div className="line"></div>
-      </div>
       <nav>
         <h1>
           <Link to="/">AM</Link>
         </h1>
 
+        <div
+          className="hamburger"
+          onClick={() => {
+            !toggleOpen ? setToggle(true) : setToggle(false);
+          }}
+        >
+          <div className="line"></div>
+          <div className="line"></div>
+          <div className="line"></div>
+        </div>
         <div className="link-container">
-          <ul className="navigation_link">
+          <ul className={`nav-links ${toggleOpen ? "open" : ""}`}>
             <Link
               to="/"
               className={select.home ? "active" : ""}
               onClick={(e) => {
+                !toggleOpen ? setToggle(true) : setToggle(false);
                 dispatch(Home());
               }}
             >
@@ -48,6 +56,7 @@ const Nav = () => {
               to="/about"
               className={select.about ? "active" : ""}
               onClick={(e) => {
+                !toggleOpen ? setToggle(true) : setToggle(false);
                 dispatch(About());
               }}
             >
@@ -57,6 +66,7 @@ const Nav = () => {
               to="/resume"
               className={select.resume ? "active" : ""}
               onClick={(e) => {
+                !toggleOpen ? setToggle(true) : setToggle(false);
                 dispatch(Resume());
               }}
             >
@@ -66,6 +76,7 @@ const Nav = () => {
               to="/portfolio"
               className={select.portfolio ? "active" : ""}
               onClick={(e) => {
+                !toggleOpen ? setToggle(true) : setToggle(false);
                 dispatch(Portfolio());
               }}
             >
@@ -75,6 +86,7 @@ const Nav = () => {
               to="/contact"
               className={select.contact ? "active" : ""}
               onClick={(e) => {
+                !toggleOpen ? setToggle(true) : setToggle(false);
                 dispatch(Contact());
               }}
             >

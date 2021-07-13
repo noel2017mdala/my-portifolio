@@ -1,17 +1,16 @@
 import styled from "styled-components";
 
 const media = {
-  mobile: `@media(max-width: 40em)`,
+  mobile: `@media(max-width: 48em)`,
   tablet: `@media(min-width: 40em) and (max-width: 75em)`,
   bigScreen: `@media (min-width: 75em)`,
 };
 
 export const Header = styled.header`
   nav {
+    height: 15vh;
     background-color: FFFFFF;
     color: white;
-    padding: 3em 0;
-    padding: 2em;
     box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
   }
 
@@ -19,25 +18,27 @@ export const Header = styled.header`
     display: inline;
     margin-left: 0.2em;
     font-size: 1.3rem;
-    text-transform: uppercase;
+    position: relative;
+    top: 2em;
+    left: 1em;
   }
-
   nav h1 a {
     text-decoration: none;
     color: rgb(255, 96, 89);
     cursor: pointer;
   }
 
-  nav .link-container {
-    float: right;
-    margin-right: 2em;
+  .nav-links {
+    display: flex;
+    list-style: none;
+    width: 50%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
   }
 
-  .navigation_link {
-    margin-bottom: 4em;
-  }
-
-  .navigation_link a {
+  .nav-links a {
     list-style: none;
     text-decoration: none;
     margin: 0.5em;
@@ -48,43 +49,66 @@ export const Header = styled.header`
   }
 
   .active {
-    padding-top: 2em;
     border-bottom: 2px solid rgb(255, 96, 89);
   }
 
   ${media.mobile} {
-    nav h1 {
-      color: rgb(255, 96, 89);
-    }
-    .link-container {
-      display: none;
-    }
-
-    .burger {
-      position: absolute;
-      cursor: pointer;
-      right: 5%;
-      top: 6.5%;
-      transform: translate(-5%, -50%);
-      z-index: 1;
-    }
-
     .line {
       width: 30px;
       height: 3px;
       background: black;
       margin: 5px;
     }
-  }
+    nav {
+      position: relative;
+    }
 
-  ${media.tablet} {
-    .burger {
+    nav h1 {
+      display: inline;
+      margin-left: 0.2em;
+      font-size: 1.3rem;
+      position: absolute;
+      cursor: pointer;
+      left: 5%;
+      top: 20%;
+    }
+
+    .hamburger {
       position: absolute;
       cursor: pointer;
       right: 5%;
-      top: 11%;
+      top: 50%;
       transform: translate(-5%, -50%);
+      z-index: 2;
+    }
+
+    .nav-links {
+      position: fixed;
+      top: -1em;
+      background: rgb(255, 96, 89);
+      height: 100vh;
+      width: 100%;
+      padding: 0em;
+      // margin: 0em;
+      flex-direction: column;
+      clip-path: circle(0px at 90% -10%);
+      -webkit-clip-path: circle(0px at 90% -10%);
+      transition: all 1s ease-out;
+      pointer-events: none;
       z-index: 1;
     }
+
+    .nav-links.open {
+      clip-path: circle(1000px at 90% -10%);
+      -webkit-clip-path: circle(1000px at 90% -10%);
+      pointer-events: all;
+    }
+
+    .nav-links a {
+      color: white;
+    }
+  }
+
+  ${media.tablet} {
   }
 `;
