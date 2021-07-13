@@ -110,5 +110,19 @@ export const Header = styled.header`
   }
 
   ${media.tablet} {
+    nav {
+      height: 18vh;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      width: 70%;
+      height: 100%;
+      justify-content: space-around;
+      align-items: center;
+      margin-left: auto;
+      // background-color: red;
+    }
   }
 `;
